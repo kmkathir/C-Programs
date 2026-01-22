@@ -23,3 +23,26 @@ int main()
             }
         }
     }
+int count=1;
+int found=0;
+    
+    for(i=1;i<size;i++)
+    {
+        if(a[i] != a[i-1])
+        count++;
+        
+    if(count==n)
+    {
+    printf("The largest element is : %d",a[i]);
+    found =1;
+    break;
+    }
+}
+if(!found)
+{
+    printf("No element found !");
+}
+
+return 0;
+
+}
