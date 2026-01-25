@@ -39,7 +39,6 @@ int main()
 
   if(!found)
     printf("No such element");
-
   
 
   return 0;
