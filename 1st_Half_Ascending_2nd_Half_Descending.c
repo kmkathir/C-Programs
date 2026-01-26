@@ -22,7 +22,19 @@ int main()
       }
     }
   }
-  
+
+  //2nd half of array 
+
+  for(i=size/2;i<size;i++){
+    for(j=i+1;j<size;j++){
+      if(a[i] < a[j])
+      {
+        temp = a[i];
+        a[i] = a[j];
+        a[j] = temp;
+      }
+    }
+  }
 
   
 return 0;
