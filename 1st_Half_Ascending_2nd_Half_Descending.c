@@ -37,5 +37,12 @@ int main()
   }
 
   
+  //printing entire array 
+
+printf("Resultant Array :");
+  for(i=0;i<size;i++)
+    printf("%d ",a[i]);  
+
+  
 return 0;
 }
