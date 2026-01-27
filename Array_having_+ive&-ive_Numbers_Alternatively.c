@@ -9,7 +9,7 @@ int main()
   scanf("%d",&size);
 
   printf("Enter array elements :");
-  for(i=o;i<size;i++)
+  for(i=0;i<size;i++)
     scanf("%d",&a[i]);
 
   //seperate pos and neg elements
@@ -17,9 +17,9 @@ int main()
 for(i=0;i<size;i++)
   {
     if(a[i] >= 0)
-      p[p++] = a[i];
+      p[r++] = a[i];
     else
-      n[n++] = a[i];
+      n[q++] = a[i];
   }
 
   i=0;
@@ -34,10 +34,12 @@ for(i=0;i<size;i++)
   while( i < r )
     a[k++] = p[i++];
 
-  while( i < q )
+  while( j < q )
     a[k++] = n[j++];
+
+  printf("Rearranged array are :");
+  for(i=0;i<size;i++)
+    printf("%d ",a[i]);
   
-
-
   return 0;
 }
