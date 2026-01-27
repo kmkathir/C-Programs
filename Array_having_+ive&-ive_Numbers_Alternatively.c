@@ -3,6 +3,7 @@
 int main()
 {
   int a[100],p[100],n[100],i,j,size;
+  int r=0,q=0,k=0;
 
   printf("Enter array size :");
   scanf("%d",&size);
@@ -20,6 +21,16 @@ for(i=0;i<size;i++)
     else
       n[n++] = a[i];
   }
+
+  i=0;
+  j=0;
+
+  while(i < r && j < q)
+    {
+    a[k++] = p[i++];
+    a[k++] = n[j++];
+    }
+  
   
 
 
