@@ -30,7 +30,12 @@ for(i=0;i<size;i++)
     a[k++] = p[i++];
     a[k++] = n[j++];
     }
-  
+
+  while( i < r )
+    a[k++] = p[i++];
+
+  while( i < q )
+    a[k++] = n[j++];
   
 
 
