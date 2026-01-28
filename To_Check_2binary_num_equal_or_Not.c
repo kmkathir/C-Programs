@@ -12,11 +12,24 @@ int main()
 	while(b[j] == '0' && b[j] != '\0')
 		j++;
 
+	if( a[i] == '\0' )
+		i--;
+	if(b[j] == '\0' )
+		j--;
 
+	while ( a[i] != '\0' && b[j] != '\0') {
+		if(a[i] != b[j]) {
+			printf("Not Equal");
+			return 0;
+		}
+		i++;
+		j++;
+	}
 
-
-
-  
+	if(a[i] == '\0' && b[j] == '\0')
+		printf("Equal");
+	else
+		printf("Not equal");
 
 	return 0;
 }
