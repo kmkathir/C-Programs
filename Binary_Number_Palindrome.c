@@ -1,20 +1,24 @@
-#include<stdio.h>
-#include<string.h>
+#include <stdio.h>
+#include <string.h>
+
 int main()
 {
-  char num[100];
-  int i,len;
-  scanf("%s",num);
-  len=strlen(num);
-  for(i=0;i<len-1;i++)
+    char a[100];
+    int len, i;
+    
+    scanf("%s", a);
+    len = strlen(a);
+    
+    for(i = 0; i < len / 2; i++)
     {
-    if(num[i] != num[len - i -1])
-    {
-      printf("Not A Palindrome");
-      break;
+        if(a[i] != a[len - i - 1])
+        {
+            printf("Not a Palindrome");
+            return 0;
+        }
     }
-  }
-  printf("Palindrome");
-
-  retrun 0;
+    
+    printf("Palindrome");
+    
+    return 0;
 }
