@@ -17,22 +17,19 @@ int main()
     scanf("%d", &cols);
 
     // Pointer to pointer to pointer
-    int ***a;
+   int ***a;
 
-    // Allocate memory for layers
-    a = malloc(layers * sizeof(int **));
+a = calloc(layers, sizeof(int **));
 
-    // Allocate rows for each layer
-    for(int i = 0; i < layers; i++)
+for(int i = 0; i < layers; i++)
+{
+    a[i] = calloc(rows, sizeof(int *));
+
+    for(int j = 0; j < rows; j++)
     {
-        a[i] = malloc(rows * sizeof(int *));
-
-        // Allocate columns for each row
-        for(int j = 0; j < rows; j++)
-        {
-            a[i][j] = malloc(cols * sizeof(int));
-        }
+        a[i][j] = calloc(cols, sizeof(int));
     }
+}
 
     // Input elements
     printf("Enter elements:\n");
